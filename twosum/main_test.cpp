@@ -1,35 +1,15 @@
-/*
- * main_test.cpp
- *
- *  Created on: Dec 1, 2019
- *      Author: guest
- */
-
-#include "include/wordcount.h"
-#include <iostream>
+#include "include/twosum.h"
 #include "gtest/gtest.h"
 
-class WordCountTest : public ::testing::Test
+
+TEST(TwoSumTest, returnIndex)
 {
-protected:
-    // void SetUp() override;
+    twosum::TwoSum ts;
+    std::vector<int> inputs{2, 7, 18, 15};
+    int target = 9;
+    std::vector<int> tmp{0, 1};
 
-    // void TearDown() override {}
-
-    // WordCount wc1("I'm in a tree.");
-    // wordcount::WordCount wc2("/home/guest/develop/wordcount/tmp.txt");
-    // wordcount::WordCount wc2("tmp.txt");
-};
-
-// TEST_F(WordCountTest, DoesXyz)
-// {
-    // ASSERT_TRUE(wc1.isWordIncluded("tree"));
-// }
-
-TEST_F(WordCountTest, DoesXyz)
-{
-    wordcount::WordCount wc2("/home/guest/workspace/wordcount/tmp.txt");
-    ASSERT_TRUE(wc2.isWordIncluded("tree"));
+    ASSERT_EQ(tmp, ts.getIndex(inputs, target));
 }
 
 int main(int argc, char **argv) {
@@ -37,16 +17,3 @@ int main(int argc, char **argv) {
     return RUN_ALL_TESTS();
 }
 
-// int main(int argc, char **argv) {
-//     wordcount::WordCount wc2("/home/guest/workspace/wordcount/tmp.txt");
-//     if (wc2.isWordIncluded("tree"))
-//         {
-//             std::cout << "yes" << std::endl;
-//         }
-//     else
-//         {
-//             std::cout << "no" << std::endl;
-//         }
-
-//     return 0;
-// }
