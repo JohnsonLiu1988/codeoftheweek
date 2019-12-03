@@ -12,4 +12,4 @@ add_subdirectory(src)
 # 指定生成目标 
 add_executable(main main_test.cpp)
 # 添加链接库
-target_link_libraries(main wordcount gtest pthread)
+target_link_libraries(main twosum gtest pthread)
