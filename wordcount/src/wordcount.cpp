@@ -39,8 +39,6 @@ namespace wordcount
     {
         if (input_[0] == '/')
         {
-            char buffer[256];
-
             std::ifstream in(input_);
             if (! in.is_open())
             {
